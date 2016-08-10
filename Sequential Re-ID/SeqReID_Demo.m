@@ -98,7 +98,7 @@ for ii = 1:length(dataSets)
     seqName = dataSets{ii}; % Dataset name
     LoadDetections; % Load the annotated detection boxes (idl0)
     
-    Image_address=[datasetPath,'/',seqName,'/img']; % Image directory
+    Image_address=[datasetPath,filesep,seqName,filesep,'img']; % Image directory
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%% SeqReID tracker %%%%%%%%%%%%%%%%%%%%%%%%%%
     Trk=SeqReID_Tracker(idl0,Image_address,param); % SeqReID Tracker
