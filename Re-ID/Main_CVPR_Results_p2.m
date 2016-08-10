@@ -1,7 +1,7 @@
 %% Code for Person Re-Identification (ReID) using m-best solutions  
 
 % It requires:
-% 1 - Assinment matrix representing a score (or cost) between all query (
+% 1 - Assignment matrix representing a score (or cost) between all query (
 %     rows in the matrix) and gallery (columns of the matrix) images. 
 % 2 - Number of solutions (mbest parameter) 
 % 3 - Gurobi ILP solver
@@ -102,7 +102,7 @@ for jd=1:d_siz
         fprintf('Rank-1 Accuracy for original costs: %f\n', cmc{jd}(1,trialNo));
         fprintf('Rank-1 Accuracy for m-best marginal costs: %f\n', mbst_cmc{jd}(1,trialNo));
     end
-    save([pwd,'\Results\All_ReID_p2_m',num2str(mbest),'.mat'],...
+    save([pwd,filesep,'Results',filesep,'All_ReID_p2_m',num2str(mbest),'.mat'],...
     'cmc','mbst_cmc','mbest','DATASET','p_time')
 end
 

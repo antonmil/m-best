@@ -3,12 +3,12 @@ function Demo_ReID_mbst(varargin)
 %% Code for Person Re-Identification (ReID) using m-best solutions  
 
 % It requires:
-% 1 - Assinment matrix representing a score (or cost) between all query (
+% 1 - Assignment matrix representing a score (or cost) between all query (
 %     rows in the matrix) and gallery (columns of the matrix) images. 
 % 2 - Number of solutions (mbest parameter) 
 % 3 - Gurobi ILP solver
 
-% The code is tested under Windows 10 (64bit)
+% The code is tested under Windows 10 (64bit) and Ubuntu 14.04 (64bit)
 
 % If you use this code for your research, please, cite:
 % S. H. Rezatofighi, A. Milan, Z. Zhang, Q. Shi, A. Dick, I. Reid, "Joint 
