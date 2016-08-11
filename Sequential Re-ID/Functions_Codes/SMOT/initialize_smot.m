@@ -67,6 +67,15 @@ switch seqName
     case 'psu-dense',
         param.hor = 60; param.eta_max = 3/2; param.conflict_ratio = 3/2; param.mu = 25;
 %%%% PSU HUB dataset
+        %%%%% AFL DATA %%%%
+    case {'AFL_S2','AFL_S3'}
+        param.hor = 50; param.eta_max = 400000;
+    case 'PETS'
+        param.hor = 40; param.eta_max = 30;
+    case 'AFL'
+        param.hor = 40; param.eta_max = 300;
+
+
     otherwise
         error('Unknown sequence!');
 end
