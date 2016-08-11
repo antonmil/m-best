@@ -28,7 +28,7 @@
 % false detections and target initiation & termination. 
  
  
-% The code is tested under Windows 10 (64bit)
+% The code was tested under Windows 10 (64bit) and Ubuntu 14.04 (64bit)
  
 % If you use this code for your research, please, cite:
 % S. H. Rezatofighi, A. Milan, Z. Zhang, Q. Shi, A. Dick, I. Reid, "Joint 
@@ -111,6 +111,7 @@ for ii = 1:length(dataSets)
     fprintf('\n');
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SMOT tracker %%%%%%%%%%%%%%%%%%%%%%%%%%%
+    initialize_smot
     SMOT_Tracker
         
     if param.vis

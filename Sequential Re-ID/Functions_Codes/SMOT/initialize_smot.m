@@ -72,7 +72,7 @@ switch seqName
         param.hor = 50; param.eta_max = 400000;
     case 'PETS'
         param.hor = 40; param.eta_max = 30;
-    case 'AFL'
+    case 'AFL_S1'
         param.hor = 40; param.eta_max = 300;
 
 
