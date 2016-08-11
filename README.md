@@ -15,11 +15,29 @@ Please cite it if you find the code useful
     }
 ```
 
+The package contains all code and data to reproduce the results from the paper.
+
+# Requirements and dependencies
+    * Matlab
+    * Gurobi solver
+    
+
 # Usage
 
-## Re-ID
-Navigate to ./Re-ID and run `Demo_ReID_mbst.m`. You may need to adjust the path to your gurobi installation in `AddPath.m` first. See the source code for further instruction. The scripts `Main_CVPR_Results_*` should produce numbers and plots as in the paper.
+There are three sub-folders, one for each example application. Each one contains a file `AddPath.m` where you need to adjust the path to your Gurobi installation.
 
+
+## Re-ID
+Navigate to `./Re-ID` and run `Demo_ReID_mbst.m`.  See the source code for further instruction. The scripts `Main_CVPR_Results_*` should produce numbers and plots as in the paper.
+
+## Sequential Re-ID
+Navigate to `./Sequential Re-ID` and run `SeqReID_Demo.m`.
+
+## Feature Matching
+Navigate to `./Feature-Matching` and run `demo*.m` for car or motorbike dataset, respectively.
+
+
+See the respective source code for further information and instructions. 
 
 
 # License
