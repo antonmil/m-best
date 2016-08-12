@@ -2,8 +2,10 @@ objs=HungarianBPMex.o BPSolver.o DualSolver.o PiSBPSolver.o PSBPSolver.o Hungari
 
 
 
-all:HungarianBPMex.mexa64 CluComputeObjMex.mexa64
+all:HungarianBPMex.mexa64 CluComputeObjMex.mexa64 HungarianBP.mexa64
 
+HungarianBP.mexa64:${objs}
+	mex -v -O -output HungarianBP ${objs}
 HungarianBPMex.mexa64:${objs}
 	mex -v -O -output HungarianBPMex ${objs}
 CluComputeObjMex.mexa64:CluComputeObjMex.cpp

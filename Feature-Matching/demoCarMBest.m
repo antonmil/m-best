@@ -188,7 +188,8 @@ for nOut = 0:MaxOutliers
         times{nOut+1,kFs} = tm;
         accs{nOut+1,kFs} = acc;
         objs{nOut+1,kFs} = obj;
-         save('Results\CarResult_Mbst.mat');
+        
+        save(['Results',filesep,'CarResult_Mbst.mat']);
       
     end
     tiimes = cell2mat(times(nOut+1,:)');
@@ -208,7 +209,7 @@ for nOut = 0:MaxOutliers
         AvgTime(nOut+1, i) = mean(tiimes(:,i));
         StdTime(nOut+1, i) = std(tiimes(:,i));
     end
-    save('Results\CarResult_Mbst.mat');
+    save(['Results',filesep,'CarResult_Mbst.mat']);
 end
 
 %% Plot Matching Accuracy

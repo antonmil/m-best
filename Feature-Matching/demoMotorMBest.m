@@ -207,8 +207,8 @@ for nOut = 0:MaxOutliers
         StdObj(nOut+1, i) = std(normalised_objs(:,i));
         AvgTime(nOut+1, i) = mean(tiimes(:,i));
         StdTime(nOut+1, i) = std(tiimes(:,i));
-    end
-    save('Results\MotorResult_Mbst.mat');
+    end    
+    save(['Results',filesep,'MotorResult_Mbst.mat']);
 end
 
 %% Plot Matching Accuracy
