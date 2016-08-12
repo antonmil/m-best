@@ -1,5 +1,0 @@
-syntax: glob
-*.o
-*.mexa64
-*.mexw64
-*.mexw32
