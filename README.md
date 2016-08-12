@@ -43,7 +43,9 @@ See the respective source code for further information and instructions.
 
 # Known Issues
 
-The SMCM method is disabled for feature matching. Should you wish to compute the results, you will need to compile the package first.
+    * The SMCM method is disabled for feature matching. Should you wish to compute the results, you will need to compile the package first.
+    
+    * The results may not correspond 100% to those reported in the paper due to random number generation, in particular for feature point matching.
 
 # License
 
