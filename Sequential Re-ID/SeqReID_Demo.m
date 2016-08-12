@@ -51,7 +51,7 @@ rng(1233245);
 datasetPath = 'Data'; % dataset directory path
 dataSets = {'crowd','seagulls','tud-crossing','tud-campus','PETS',...
     'AFL_S1','AFL_S2','AFL_S3'};
-
+param.mota_th = 0.5; % Threshold for MOTA evaluation
 %% Parameters for smot tracker [Dicle et al. ICCV 2013] 
 methods = {'ihtls','admm','ip'};
 method  = methods{1};
