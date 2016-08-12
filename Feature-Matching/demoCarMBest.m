@@ -85,9 +85,9 @@ for nOut = 0:MaxOutliers
         Ct = ones(size(KP)); % Unary term 
         
         %% SMCM (Sequential Monte Carlo Method)
-        problem = makeProblem_SMC( K,size(KP,1),size(KP,2),asgT.X);
-        setMethods;
-        [acc(1),obj(1),tm(1)] = wrapper_GM(methods(1), problem);
+        % problem = makeProblem_SMC( K,size(KP,1),size(KP,2),asgT.X);
+        % setMethods;
+        % [acc(1),obj(1),tm(1)] = wrapper_GM(methods(1), problem);
         
         %% Hypergraph
         % The results for Hypergraph method are extracted from the paper

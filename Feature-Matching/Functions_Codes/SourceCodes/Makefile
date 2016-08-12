@@ -9,7 +9,7 @@ HungarianBP.mexa64:${objs}
 HungarianBPMex.mexa64:${objs}
 	mex -v -O -output HungarianBPMex ${objs}
 CluComputeObjMex.mexa64:CluComputeObjMex.cpp
-	mex -v -O CluComputeObjMex.cpp
+	mex -v -O -output CluComputeObj CluComputeObjMex.obj
 
 %.o:%.cpp
 	mex -v -O -c $^
