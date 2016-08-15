@@ -34,11 +34,18 @@ Navigate to `./Re-ID` and run `Demo_ReID_mbst.m`.  See the source code for furth
 Navigate to `./Sequential Re-ID` and run `SeqReID_Demo.m`.
 
 ## Feature Matching
+You will first need to compile the mex files for BP Matching. To that end, go to 
+`./Feature-Matching/Functions_Codes/SourceCodes` and run compileMex.m. Then
 Navigate to `./Feature-Matching` and run `demo*.m` for car or motorbike dataset, respectively.
 
 
 See the respective source code for further information and instructions. 
 
+# Known Issues
+
+    * The SMCM method is disabled for feature matching. Should you wish to compute the results, you will need to compile the package first.
+    
+    * The results may not correspond 100% to those reported in the paper due to random number generation, in particular for feature point matching.
 
 # License
 
