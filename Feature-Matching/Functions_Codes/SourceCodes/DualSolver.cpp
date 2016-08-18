@@ -17,7 +17,9 @@
 #include <fstream>
 #include <cstring>
 #include <algorithm>
+#include <cmath>
 #include "DualSolver.h"
+
 bool zzhang::CDualSolver::ReadUAIBin( const std::string& FileName)
 {
      clock_t start = clock();

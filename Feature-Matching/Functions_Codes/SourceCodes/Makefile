@@ -1,19 +1,20 @@
 objs=HungarianBPMex.o BPSolver.o DualSolver.o PiSBPSolver.o PSBPSolver.o HungarianBP.o
+#MATLAB=/usr/local/MATLAB/R2016a/
+MEX=mex
 
 
+all:HungarianBPMex CluComputeObjMex AdditionOfPhiMex
 
-all:HungarianBPMex.mexa64 CluComputeObjMex.mexa64 HungarianBP.mexa64
-
-HungarianBP.mexa64:${objs}
-	mex -v -O -output HungarianBP ${objs}
-HungarianBPMex.mexa64:${objs}
-	mex -v -O -output HungarianBPMex ${objs}
-CluComputeObjMex.mexa64:CluComputeObjMex.cpp
-	mex -v -O -output CluComputeObj CluComputeObjMex.obj
+HungarianBP:${objs}
+	${MEX} -v -O -output HungarianBP ${objs}
+CluComputeObjMex:CluComputeObjMex.o
+	${MEX} -v -O -output CluComputeObj CluComputeObjMex.o
+AdditionOfPhiMex:AdditionOfPhiMex.o
+	${MEX} -v -O -output AdditionOfPhiMex AdditionOfPhiMex.o
 
 %.o:%.cpp
-	mex -v -O -c $^
+	${MEX} -c $^ -O
 
 clean:
-	rm -rf *.mexa64
+	rm -rf *.mex*
 	rm -rf *.o
